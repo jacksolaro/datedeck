@@ -1,10 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
+import DateCard from "./Components/DateCard/DateCard";
 
 function App() {
   return (
     <div>
-      <h1>Test</h1>
+      <DateCard></DateCard>
     </div>
   );
 }
