@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./DateCard.css";
+import database from "../../firebase.js";
 
 function DateCard() {
+  const [cards, setCards] = useState([]);
+
+  //   Piece of code which runs based on a condition
+  useEffect(() => {
+    const unsubscribe = database
+      .collection("cards")
+      .onSnapshot((snapshot) =>
+        setCards(snapshot.docs.map((doc) => doc.data()))
+      );
+    console.log("Data", cards);
+
+    return () => {
+      //   This is the clean up
+      unsubscribe();
+    };
+  }, []);
+
   return (
     <div className="DateCard__Card">
-      <h1>TYPE OF QUESTION</h1>
+      <h1>{cards[0].questionCategory}</h1>
       <hr></hr>
-      <h2>This is a sample question.</h2>
+      <h2>{cards[0].questionText}</h2>
     </div>
   );
 }
