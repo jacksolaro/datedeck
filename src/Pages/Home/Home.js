@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DateCard from "../../Components/DateCard/DateCard";
 import database from "../../firebase.js";
+import "./Home.css";
 
 function Home() {
   const [cards, setCards] = useState([]);
@@ -39,7 +40,11 @@ function Home() {
       ) : (
         <DateCard cardDetails={cards[cardIndex]}></DateCard>
       )}
-      <button onClick={handleClick}>Next</button>
+      <div className="Home__Buttons">
+        <button className="Next__Button" onClick={handleClick}>
+          Next
+        </button>
+      </div>
     </div>
   );
 }

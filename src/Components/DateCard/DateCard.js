@@ -5,9 +5,9 @@ import database from "../../firebase.js";
 function DateCard(props) {
   return (
     <div className="DateCard__Card">
-      <h1>{props.cardDetails.questionCategory}</h1>
+      <h3>{props.cardDetails.questionCategory}</h3>
       <hr></hr>
-      <h2>{props.cardDetails.questionText}</h2>
+      <h1>{props.cardDetails.questionText}</h1>
     </div>
   );
 }

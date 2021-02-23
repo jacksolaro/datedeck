@@ -1,8 +1,9 @@
 .DateCard__Card {
-  border: 1px solid black;
+  border: 5px solid lightgray;
+  background-color: white;
   border-radius: 20px;
-  width: 30vw;
-  height: 80vh;
+  width: 375px;
+  height: 525px;
   text-align: center;
   margin: 30px auto;
 }
