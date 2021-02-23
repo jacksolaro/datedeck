@@ -20,11 +20,16 @@ function DateCard() {
     };
   }, []);
 
+  const handleClick = () => {
+    console.log("Click!");
+  };
+
   return (
     <div className="DateCard__Card">
       <h1>{cards[0].questionCategory}</h1>
       <hr></hr>
       <h2>{cards[0].questionText}</h2>
+      <button onClick={handleClick}>Next</button>
     </div>
   );
 }
