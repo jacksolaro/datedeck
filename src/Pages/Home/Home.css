@@ -16,3 +16,9 @@
   text-align: center;
   padding: 10px 40px;
 }
+
+.Home__HeaderText {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+}

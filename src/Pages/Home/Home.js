@@ -35,6 +35,7 @@ function Home() {
 
   return (
     <div className="Home__Container">
+      <h1 className="Home__HeaderText">The Date Deck</h1>
       {loading ? (
         <h1>Loading</h1>
       ) : (
