@@ -1,6 +1,15 @@
+.Home__Container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .Home__Buttons {
   width: 100%;
   text-align: center;
+  padding: 20px;
 }
 .Next__Button {
   margin: auto auto;
